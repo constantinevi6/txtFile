@@ -1,21 +1,57 @@
 //
-//  txtFile.hpp
-//  txtFile
+//  txtfile.hpp
+//  ASPS
 //
-//  Created by Constantine VI on 2021/11/9.
+//  Created by Constantine VI on 2021/8/24.
+//  Copyright © 2021 CSRSR. All rights reserved.
 //
 
-#ifndef txtFile_
-#define txtFile_
+#ifndef txtfile_h
+#define txtfile_h
 
-/* The classes below are exported */
-#pragma GCC visibility push(default)
+#include <vector>
+#include <string>
+#include <filesystem>
 
 class txtFile
 {
-    public:
-    void HelloWorld(const char *);
+private:
+    std::filesystem::path pathFile;
+    std::vector<std::string> TXTContent;
+public:
+    txtFile();
+    txtFile(std::filesystem::path InputFilePath);
+    ~txtFile();
+
+    // 讀取文字檔內容
+    int read();
+
+    // 寫入文字檔
+    int write();
+
+    // 寫入文字檔至新的位置
+    int write(std::filesystem::path pathOutputFile);
+
+    // 於檔案末端加入文字
+    int append(std::string Inputstr);
+
+    // 於檔案末端加入一行文字
+    int appendLine(std::string Inputstr);
+
+    // 加入一行文字至指定的行數之後
+    int appendLine(std::string Inputstr, int NoLine);
+
+    // 印出檔案內容
+    int print();
+    
+    // 印出檔案行數
+    unsigned long getNLine();
+    
+    // 印出指定行數之內容
+    std::string getLineContent(unsigned long NoLine);
+
+    // 印出包含關鍵字之內容
+    std::string getLineContent(std::string InputKeyword);
 };
 
-#pragma GCC visibility pop
-#endif
+#endif /* txtfile_h */

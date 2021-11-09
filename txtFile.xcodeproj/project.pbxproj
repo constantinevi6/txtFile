@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A75A805F273A0B9000F1DF59 /* txtFile.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A75A805E273A0B9000F1DF59 /* txtFile.hpp */; };
-		A75A8061273A0B9000F1DF59 /* txtFilePriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A75A8060273A0B9000F1DF59 /* txtFilePriv.hpp */; };
 		A75A8063273A0B9000F1DF59 /* txtFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A75A8062273A0B9000F1DF59 /* txtFile.cpp */; };
+		A75A8071273A0C2F00F1DF59 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = A75A806F273A0C2F00F1DF59 /* Makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A75A805B273A0B9000F1DF59 /* libtxtFile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtxtFile.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75A805E273A0B9000F1DF59 /* txtFile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = txtFile.hpp; sourceTree = "<group>"; };
-		A75A8060273A0B9000F1DF59 /* txtFilePriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = txtFilePriv.hpp; sourceTree = "<group>"; };
 		A75A8062273A0B9000F1DF59 /* txtFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = txtFile.cpp; sourceTree = "<group>"; };
+		A75A806F273A0C2F00F1DF59 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A75A8070273A0C2F00F1DF59 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +34,8 @@
 		A75A8052273A0B9000F1DF59 = {
 			isa = PBXGroup;
 			children = (
+				A75A806F273A0C2F00F1DF59 /* Makefile */,
+				A75A8070273A0C2F00F1DF59 /* README.md */,
 				A75A805D273A0B9000F1DF59 /* txtFile */,
 				A75A805C273A0B9000F1DF59 /* Products */,
 			);
@@ -50,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				A75A805E273A0B9000F1DF59 /* txtFile.hpp */,
-				A75A8060273A0B9000F1DF59 /* txtFilePriv.hpp */,
 				A75A8062273A0B9000F1DF59 /* txtFile.cpp */,
 			);
 			path = txtFile;
@@ -63,7 +65,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A75A8061273A0B9000F1DF59 /* txtFilePriv.hpp in Headers */,
 				A75A805F273A0B9000F1DF59 /* txtFile.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75A8071273A0C2F00F1DF59 /* Makefile in Sources */,
 				A75A8063273A0B9000F1DF59 /* txtFile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
