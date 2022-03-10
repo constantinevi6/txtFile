@@ -342,3 +342,5 @@ healthchecksdb
 Build/*
 .DS_Store
 lib
+
+*.o
