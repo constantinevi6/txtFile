@@ -39,7 +39,7 @@ public:
     int appendLine(std::string Inputstr);
 
     // 加入一行文字至指定的行數之後
-    int appendLine(std::string Inputstr, int NoLine);
+    int appendLine(std::string Inputstr, unsigned long NoLine);
 
     // 印出檔案內容
     int print();

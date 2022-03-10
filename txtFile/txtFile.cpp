@@ -6,7 +6,7 @@
 //  Copyright © 2020 CSRSR. All rights reserved.
 //
 
-#include "txtfile.hpp"
+#include "txtFile.hpp"
 #include <iostream>
 #include <fstream>
 #include <algorithm>
@@ -85,7 +85,7 @@ int txtFile::appendLine(std::string Inputstr) {
     return 0;
 }
 
-int txtFile::appendLine(std::string Inputstr, int NoLine) {
+int txtFile::appendLine(std::string Inputstr, unsigned long NoLine) {
     if (TXTContent.size() < NoLine) {
         TXTContent.resize(NoLine);
     }
