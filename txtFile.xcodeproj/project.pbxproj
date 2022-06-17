@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A75A805F273A0B9000F1DF59 /* txtFile.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A75A805E273A0B9000F1DF59 /* txtFile.hpp */; };
 		A75A8063273A0B9000F1DF59 /* txtFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A75A8062273A0B9000F1DF59 /* txtFile.cpp */; };
-		A75A8071273A0C2F00F1DF59 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = A75A806F273A0C2F00F1DF59 /* Makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,7 +125,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A75A8071273A0C2F00F1DF59 /* Makefile in Sources */,
 				A75A8063273A0B9000F1DF59 /* txtFile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
