@@ -36,7 +36,7 @@ public:
     int append(std::string Inputstr);
 
     // 於檔案末端加入一行文字
-    int appendLine(std::string Inputstr);
+    int appendLine(std::string Inputstr = "");
 
     // 加入一行文字至指定的行數之後
     int appendLine(std::string Inputstr, unsigned long NoLine);

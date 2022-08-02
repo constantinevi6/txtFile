@@ -101,7 +101,7 @@ int txtFile::print() {
 }
 
 unsigned long txtFile::getNLine() {
-    return TXTContent.size();
+    return (unsigned long)TXTContent.size();
 }
 
 std::string txtFile::getLineContent(unsigned long NoLine) {
