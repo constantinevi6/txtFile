@@ -31,7 +31,7 @@ ifeq ($(OS),Windows_NT)
 TARGET	:= $(LIBDIR)/$(PROJECT).lib
 
 else
-TARGET	:= $(LIBDIR)/$(PROJECT).a
+TARGET	:= $(LIBDIR)/lib$(PROJECT).a
 
 endif
 
