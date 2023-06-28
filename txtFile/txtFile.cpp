@@ -9,6 +9,7 @@
 #include "txtFile.hpp"
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <algorithm>
 
 txtFile::txtFile() {
@@ -28,13 +29,15 @@ int txtFile::read() {
     try {
         if (std::filesystem::exists(pathFile)) {
             std::fstream fsInput(pathFile.string(), std::ifstream::in);
-            while (getline(fsInput, Line)) {
+            std::stringstream ss;
+            ss << fsInput.rdbuf();
+            fsInput.close();
+            while (getline(ss, Line)) {
                 if (Line.find('\r') != Line.npos) {
                     Line.erase(std::remove(Line.begin(), Line.end(), '\r'), Line.end());
                 }
                 TXTContent.push_back(Line);
             }
-            fsInput.close();
         }
         else {
             std::string error = "Error: " + pathFile.string() + ", No such file or directory.";
@@ -49,25 +52,29 @@ int txtFile::read() {
 }
 
 int txtFile::write() {
-    std::ofstream filestr;
-    filestr.open(pathFile.string());
+    std::stringstream Content;
     for (auto& it : TXTContent)
     {
-        filestr << it;
-        filestr << std::endl;
+        Content << it.c_str();
+        Content << std::endl;
     }
+    std::ofstream filestr;
+    filestr.open(pathFile.string());
+    filestr << Content.rdbuf();
     filestr.close();
     return 0;
 }
 
 int txtFile::write(std::filesystem::path pathOutputFile) {
-    std::ofstream filestr;
-    filestr.open(pathOutputFile.string());
+    std::stringstream Content;
     for (auto& it : TXTContent)
     {
-        filestr << it;
-        filestr << std::endl;
+        Content << it.c_str();
+        Content << std::endl;
     }
+    std::ofstream filestr;
+    filestr.open(pathOutputFile.string());
+    filestr << Content.rdbuf();
     filestr.close();
     return 0;
 }
