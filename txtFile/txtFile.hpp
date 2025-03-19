@@ -34,12 +34,11 @@ public:
 
     // 於檔案末端加入文字
     int append(std::string Inputstr);
+    int append(char* Inputstr);
 
-    // 於檔案末端加入一行文字
-    int appendLine(std::string Inputstr = "");
-
-    // 加入一行文字至指定的行數之後
-    int appendLine(std::string Inputstr, unsigned long NoLine);
+    // 加入一行文字至指定的行數之後，預設為新增一行
+    int appendLine(std::string Inputstr = "", unsigned long NoLine = -1);
+    int appendLine(char* Inputstr, unsigned long NoLine = -1);
 
     // 印出檔案內容
     int print();

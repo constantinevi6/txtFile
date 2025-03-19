@@ -87,16 +87,33 @@ int txtFile::append(std::string Inputstr) {
     return 0;
 }
 
-int txtFile::appendLine(std::string Inputstr) {
-    TXTContent.push_back(Inputstr);
+int txtFile::append(char* Inputstr) {
+    if (TXTContent.size() == 0) {
+        TXTContent.push_back(std::string());
+    }
+    TXTContent.rbegin()->append(Inputstr);
     return 0;
 }
 
 int txtFile::appendLine(std::string Inputstr, unsigned long NoLine) {
-    if (TXTContent.size() < NoLine) {
-        TXTContent.resize(NoLine);
+    if (NoLine == -1 ) {
+        TXTContent.push_back(Inputstr);
     }
-    TXTContent.insert(TXTContent.begin() + NoLine, Inputstr);
+    else if (TXTContent.size() < NoLine) {
+        TXTContent.resize(NoLine);
+        TXTContent.insert(TXTContent.begin() + NoLine, Inputstr);
+    }
+    return 0;
+}
+
+int txtFile::appendLine(char* Inputstr, unsigned long NoLine) {
+    if (NoLine == -1 ) {
+        TXTContent.push_back(Inputstr);
+    }
+    else if (TXTContent.size() < NoLine) {
+        TXTContent.resize(NoLine);
+        TXTContent.insert(TXTContent.begin() + NoLine, Inputstr);
+    }
     return 0;
 }
 
